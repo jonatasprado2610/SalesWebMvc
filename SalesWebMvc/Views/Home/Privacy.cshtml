@@ -1,13 +1,39 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
-    <h3>@ViewData["Message"]</h3>
+    ViewData["Title"] = "Política de Privacidade";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<h1 class="mt-4">@ViewData["Title"]</h1>
 
-<p>Professor @ViewData["Professor"]</p>
+<hr />
 
-<address>
-    <strong>More information: </strong> <a href="https://github.com/jonatasprado2610">Github</a>
+@if (ViewData["Message"] != null)
+{
+    <h4 class="text-muted">@ViewData["Message"]</h4>
+}
+
+<p class="mt-3">
+    Esta página descreve como as informações dos usuários são tratadas neste sistema.
+    Nosso compromisso é garantir a privacidade e a segurança dos dados utilizados
+    apenas para fins acadêmicos e de aprendizado.
+</p>
+
+<p>
+    Nenhuma informação pessoal é compartilhada com terceiros.
+    Os dados utilizados no sistema servem exclusivamente para demonstração
+    e estudo de desenvolvimento de software.
+</p>
+
+<div class="mt-4">
+    <p>
+        <strong>Professor responsável:</strong>
+        @ViewData["Professor"]
+    </p>
+</div>
+
+<address class="mt-4">
+    <strong>Mais informações:</strong>
+    <br />
+    <a href="https://github.com/jonatasprado2610" target="_blank">
+        github.com/jonatasprado2610
+    </a>
 </address>

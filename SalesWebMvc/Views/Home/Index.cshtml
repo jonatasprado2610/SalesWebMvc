@@ -1,8 +1,82 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">SalesWebMvc</h1>
+            <p class="col-md-8 fs-5">
+                Sistema web desenvolvido com <strong>ASP.NET Core MVC</strong>
+                como parte do estudo de aplicações Web com Entity Framework Core
+                e arquitetura MVC.
+            </p>
+            <p class="text-muted">
+                Projeto acadêmico baseado no curso
+                <strong>C# COMPLETO – Programação Orientada a Objetos + Projetos</strong>.
+            </p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Departments</h5>
+                    <p class="card-text">
+                        Cadastro e gerenciamento de departamentos da empresa,
+                        utilizados para organização dos vendedores.
+                    </p>
+                    <a asp-controller="Departments" asp-action="Index" class="btn btn-primary">
+                        Acessar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Sellers</h5>
+                    <p class="card-text">
+                        Gerenciamento de vendedores com operações de
+                        criação, edição, exclusão e visualização de dados.
+                    </p>
+                    <a asp-controller="Sellers" asp-action="Index" class="btn btn-primary">
+                        Acessar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Sales</h5>
+                    <p class="card-text">
+                        Consulta de registros de vendas com filtros por data
+                        e agrupamento por departamento.
+                    </p>
+                    <a asp-controller="SalesRecords" asp-action="Index" class="btn btn-primary">
+                        Acessar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5" />
+
+    <div class="row">
+        <div class="col">
+            <h4>Tecnologias utilizadas</h4>
+            <ul>
+                <li>ASP.NET Core MVC</li>
+                <li>Entity Framework Core (Code First)</li>
+                <li>MySQL</li>
+                <li>Bootstrap (Bootswatch)</li>
+                <li>Razor Pages</li>
+            </ul>
+        </div>
+    </div>
 </div>
